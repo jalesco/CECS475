@@ -1,0 +1,156 @@
+Broker name: Broker 1 Stock Name: Retail Current Value: 37 Number of Changes: 7
+
+Broker name: Broker 4 Stock Name: Retail Current Value: 37 Number of Changes: 7
+
+Broker name: Broker 1 Stock Name: Retail Current Value: 38 Number of Changes: 8
+
+Broker name: Broker 4 Stock Name: Retail Current Value: 38 Number of Changes: 8
+
+Broker name: Broker 1 Stock Name: Retail Current Value: 39 Number of Changes: 9
+
+Broker name: Broker 4 Stock Name: Retail Current Value: 39 Number of Changes: 9
+
+Broker name: Broker 1 Stock Name: Retail Current Value: 40 Number of Changes: 10
+
+Broker name: Broker 4 Stock Name: Retail Current Value: 40 Number of Changes: 10
+
+Broker name: Broker 2 Stock Name: Banking Current Value: 101 Number of Changes: 11
+
+Broker name: Broker 3 Stock Name: Banking Current Value: 101 Number of Changes: 11
+
+Broker name: Broker 4 Stock Name: Banking Current Value: 101 Number of Changes: 11
+
+Broker name: Broker 1 Stock Name: Retail Current Value: 41 Number of Changes: 11
+
+Broker name: Broker 4 Stock Name: Retail Current Value: 41 Number of Changes: 11
+
+Broker name: Broker 2 Stock Name: Banking Current Value: 102 Number of Changes: 12
+
+Broker name: Broker 3 Stock Name: Banking Current Value: 102 Number of Changes: 12
+
+Broker name: Broker 4 Stock Name: Banking Current Value: 102 Number of Changes: 12
+
+Broker name: Broker 1 Stock Name: Retail Current Value: 42 Number of Changes: 12
+
+Broker name: Broker 4 Stock Name: Retail Current Value: 42 Number of Changes: 12
+
+Broker name: Broker 2 Stock Name: Banking Current Value: 103 Number of Changes: 13
+
+Broker name: Broker 3 Stock Name: Banking Current Value: 103 Number of Changes: 13
+
+Broker name: Broker 4 Stock Name: Banking Current Value: 103 Number of Changes: 13
+
+Broker name: Broker 1 Stock Name: Retail Current Value: 43 Number of Changes: 13
+
+Broker name: Broker 4 Stock Name: Retail Current Value: 43 Number of Changes: 13
+
+Broker name: Broker 2 Stock Name: Banking Current Value: 104 Number of Changes: 14
+
+Broker name: Broker 3 Stock Name: Banking Current Value: 104 Number of Changes: 14
+
+Broker name: Broker 4 Stock Name: Banking Current Value: 104 Number of Changes: 14
+
+Broker name: Broker 1 Stock Name: Retail Current Value: 44 Number of Changes: 14
+
+Broker name: Broker 4 Stock Name: Retail Current Value: 44 Number of Changes: 14
+
+Broker name: Broker 2 Stock Name: Banking Current Value: 105 Number of Changes: 15
+
+Broker name: Broker 3 Stock Name: Banking Current Value: 105 Number of Changes: 15
+
+Broker name: Broker 1 Stock Name: Retail Current Value: 45 Number of Changes: 15
+
+Broker name: Broker 4 Stock Name: Banking Current Value: 105 Number of Changes: 15
+
+Broker name: Broker 4 Stock Name: Retail Current Value: 45 Number of Changes: 15
+
+Broker name: Broker 1 Stock Name: Technology Current Value: 176 Number of Changes: 16
+
+Broker name: Broker 2 Stock Name: Technology Current Value: 176 Number of Changes: 16
+
+Broker name: Broker 3 Stock Name: Technology Current Value: 176 Number of Changes: 16
+
+Broker name: Broker 4 Stock Name: Technology Current Value: 176 Number of Changes: 16
+
+Broker name: Broker 2 Stock Name: Banking Current Value: 106 Number of Changes: 16
+
+Broker name: Broker 3 Stock Name: Banking Current Value: 106 Number of Changes: 16
+
+Broker name: Broker 4 Stock Name: Banking Current Value: 106 Number of Changes: 16
+
+Broker name: Broker 1 Stock Name: Retail Current Value: 46 Number of Changes: 16
+
+Broker name: Broker 4 Stock Name: Retail Current Value: 46 Number of Changes: 16
+
+Broker name: Broker 1 Stock Name: Technology Current Value: 177 Number of Changes: 17
+
+Broker name: Broker 2 Stock Name: Technology Current Value: 177 Number of Changes: 17
+
+Broker name: Broker 3 Stock Name: Technology Current Value: 177 Number of Changes: 17
+
+Broker name: Broker 4 Stock Name: Technology Current Value: 177 Number of Changes: 17
+
+Broker name: Broker 2 Stock Name: Banking Current Value: 107 Number of Changes: 17
+
+Broker name: Broker 3 Stock Name: Banking Current Value: 107 Number of Changes: 17
+
+Broker name: Broker 4 Stock Name: Banking Current Value: 107 Number of Changes: 17
+
+Broker name: Broker 1 Stock Name: Retail Current Value: 47 Number of Changes: 17
+
+Broker name: Broker 4 Stock Name: Retail Current Value: 47 Number of Changes: 17
+
+Broker name: Broker 1 Stock Name: Technology Current Value: 178 Number of Changes: 18
+
+Broker name: Broker 2 Stock Name: Technology Current Value: 178 Number of Changes: 18
+
+Broker name: Broker 3 Stock Name: Technology Current Value: 178 Number of Changes: 18
+
+Broker name: Broker 4 Stock Name: Technology Current Value: 178 Number of Changes: 18
+
+Broker name: Broker 2 Stock Name: Banking Current Value: 108 Number of Changes: 18
+
+Broker name: Broker 3 Stock Name: Banking Current Value: 108 Number of Changes: 18
+
+Broker name: Broker 4 Stock Name: Banking Current Value: 108 Number of Changes: 18
+
+Broker name: Broker 1 Stock Name: Retail Current Value: 48 Number of Changes: 18
+
+Broker name: Broker 4 Stock Name: Retail Current Value: 48 Number of Changes: 18
+
+Broker name: Broker 1 Stock Name: Technology Current Value: 179 Number of Changes: 19
+
+Broker name: Broker 2 Stock Name: Technology Current Value: 179 Number of Changes: 19
+
+Broker name: Broker 3 Stock Name: Technology Current Value: 179 Number of Changes: 19
+
+Broker name: Broker 4 Stock Name: Technology Current Value: 179 Number of Changes: 19
+
+Broker name: Broker 2 Stock Name: Banking Current Value: 109 Number of Changes: 19
+
+Broker name: Broker 3 Stock Name: Banking Current Value: 109 Number of Changes: 19
+
+Broker name: Broker 4 Stock Name: Banking Current Value: 109 Number of Changes: 19
+
+Broker name: Broker 1 Stock Name: Retail Current Value: 49 Number of Changes: 19
+
+Broker name: Broker 4 Stock Name: Retail Current Value: 49 Number of Changes: 19
+
+Broker name: Broker 1 Stock Name: Technology Current Value: 180 Number of Changes: 20
+
+Broker name: Broker 2 Stock Name: Technology Current Value: 180 Number of Changes: 20
+
+Broker name: Broker 3 Stock Name: Technology Current Value: 180 Number of Changes: 20
+
+Broker name: Broker 4 Stock Name: Technology Current Value: 180 Number of Changes: 20
+
+Broker name: Broker 2 Stock Name: Banking Current Value: 110 Number of Changes: 20
+
+Broker name: Broker 3 Stock Name: Banking Current Value: 110 Number of Changes: 20
+
+Broker name: Broker 1 Stock Name: Retail Current Value: 50 Number of Changes: 20
+
+Broker name: Broker 4 Stock Name: Retail Current Value: 50 Number of Changes: 20
+
+Broker name: Broker 4 Stock Name: Banking Current Value: 110 Number of Changes: 20
+

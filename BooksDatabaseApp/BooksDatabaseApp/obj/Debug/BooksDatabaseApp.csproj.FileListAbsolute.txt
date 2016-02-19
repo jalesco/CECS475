@@ -1,0 +1,14 @@
+C:\Users\jalex_000\Desktop\CECS475\BooksDatabaseApp\BooksDatabaseApp\bin\Debug\BooksDatabaseApp.exe.config
+C:\Users\jalex_000\Desktop\CECS475\BooksDatabaseApp\BooksDatabaseApp\bin\Debug\BooksDatabaseApp.exe
+C:\Users\jalex_000\Desktop\CECS475\BooksDatabaseApp\BooksDatabaseApp\bin\Debug\BooksDatabaseApp.pdb
+C:\Users\jalex_000\Desktop\CECS475\BooksDatabaseApp\BooksDatabaseApp\obj\Debug\BooksDatabaseApp.csprojResolveAssemblyReference.cache
+C:\Users\jalex_000\Desktop\CECS475\BooksDatabaseApp\BooksDatabaseApp\obj\Debug\MainWindow.g.cs
+C:\Users\jalex_000\Desktop\CECS475\BooksDatabaseApp\BooksDatabaseApp\obj\Debug\App.g.cs
+C:\Users\jalex_000\Desktop\CECS475\BooksDatabaseApp\BooksDatabaseApp\obj\Debug\BooksDatabaseApp_MarkupCompile.cache
+C:\Users\jalex_000\Desktop\CECS475\BooksDatabaseApp\BooksDatabaseApp\obj\Debug\BooksDatabaseApp_MarkupCompile.lref
+C:\Users\jalex_000\Desktop\CECS475\BooksDatabaseApp\BooksDatabaseApp\obj\Debug\MainWindow.baml
+C:\Users\jalex_000\Desktop\CECS475\BooksDatabaseApp\BooksDatabaseApp\obj\Debug\BooksDatabaseApp.g.resources
+C:\Users\jalex_000\Desktop\CECS475\BooksDatabaseApp\BooksDatabaseApp\obj\Debug\BooksDatabaseApp.Properties.Resources.resources
+C:\Users\jalex_000\Desktop\CECS475\BooksDatabaseApp\BooksDatabaseApp\obj\Debug\BooksDatabaseApp.csproj.GenerateResource.Cache
+C:\Users\jalex_000\Desktop\CECS475\BooksDatabaseApp\BooksDatabaseApp\obj\Debug\BooksDatabaseApp.exe
+C:\Users\jalex_000\Desktop\CECS475\BooksDatabaseApp\BooksDatabaseApp\obj\Debug\BooksDatabaseApp.pdb

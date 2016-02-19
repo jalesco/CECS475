@@ -1,0 +1,6 @@
+C:\Users\jalex_000\Desktop\CECS475\BasicEvent\BasicEvent\bin\Debug\BasicEvent.exe.config
+C:\Users\jalex_000\Desktop\CECS475\BasicEvent\BasicEvent\bin\Debug\BasicEvent.exe
+C:\Users\jalex_000\Desktop\CECS475\BasicEvent\BasicEvent\bin\Debug\BasicEvent.pdb
+C:\Users\jalex_000\Desktop\CECS475\BasicEvent\BasicEvent\obj\Debug\BasicEvent.csprojResolveAssemblyReference.cache
+C:\Users\jalex_000\Desktop\CECS475\BasicEvent\BasicEvent\obj\Debug\BasicEvent.exe
+C:\Users\jalex_000\Desktop\CECS475\BasicEvent\BasicEvent\obj\Debug\BasicEvent.pdb
