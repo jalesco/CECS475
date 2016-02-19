@@ -5,7 +5,7 @@ namespace StockEvent
 {
     class Stock
     {
-        private string stockName;
+        private string stockName; //stock's name
         private int initialValue;
         private int maxChange;
         private int threshold;
