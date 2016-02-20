@@ -1,6 +1,0 @@
-C:\Users\jalex_000\Desktop\CECS475\StockAnalysis\StockAnalysis\bin\Debug\StockAnalysis.exe.config
-C:\Users\jalex_000\Desktop\CECS475\StockAnalysis\StockAnalysis\bin\Debug\StockAnalysis.exe
-C:\Users\jalex_000\Desktop\CECS475\StockAnalysis\StockAnalysis\bin\Debug\StockAnalysis.pdb
-C:\Users\jalex_000\Desktop\CECS475\StockAnalysis\StockAnalysis\obj\Debug\StockAnalysis.csprojResolveAssemblyReference.cache
-C:\Users\jalex_000\Desktop\CECS475\StockAnalysis\StockAnalysis\obj\Debug\StockAnalysis.exe
-C:\Users\jalex_000\Desktop\CECS475\StockAnalysis\StockAnalysis\obj\Debug\StockAnalysis.pdb
