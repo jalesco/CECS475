@@ -1,0 +1,12 @@
+C:\Users\jalex_000\Desktop\CECS475\DataAccessLayer\DataAccessLayer\bin\Debug\DataAccessLayer.exe.config
+C:\Users\jalex_000\Desktop\CECS475\DataAccessLayer\DataAccessLayer\bin\Debug\SchoolDB.mdf
+C:\Users\jalex_000\Desktop\CECS475\DataAccessLayer\DataAccessLayer\bin\Debug\SchoolDB_log.ldf
+C:\Users\jalex_000\Desktop\CECS475\DataAccessLayer\DataAccessLayer\bin\Debug\DataAccessLayer.exe
+C:\Users\jalex_000\Desktop\CECS475\DataAccessLayer\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+C:\Users\jalex_000\Desktop\CECS475\DataAccessLayer\DataAccessLayer\bin\Debug\EntityFramework.dll
+C:\Users\jalex_000\Desktop\CECS475\DataAccessLayer\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\jalex_000\Desktop\CECS475\DataAccessLayer\DataAccessLayer\bin\Debug\EntityFramework.xml
+C:\Users\jalex_000\Desktop\CECS475\DataAccessLayer\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\jalex_000\Desktop\CECS475\DataAccessLayer\DataAccessLayer\obj\Debug\DataAccessLayer.csprojResolveAssemblyReference.cache
+C:\Users\jalex_000\Desktop\CECS475\DataAccessLayer\DataAccessLayer\obj\Debug\DataAccessLayer.exe
+C:\Users\jalex_000\Desktop\CECS475\DataAccessLayer\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
