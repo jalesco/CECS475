@@ -28,13 +28,17 @@ namespace EmployeeSortProgram
 
         //ICOMPARABLE COMPARETO OVERRIDE
         // param obj: Object being compared
+
+        //BIG DIFFERENCE: IComparable has one object being passed in their override of the CompareTo, IComparer has two
         int IComparable.CompareTo(Object obj)
         { //overwrite CompareTo and pass in ONE Object parameter
-            Employee e = (Employee)obj;
+            Employee e = (Employee)obj; //Cast the object to whatever object you want to compare
+            
+            //
             if (this.LastName.CompareTo(e.LastName) == 0) {
                 return String.Compare(this.FirstName, e.FirstName);
             }
-            return String.Compare(this.LastName, e.LastName);
+            return String.Compare(this.LastName, e.LastName); //return the comparison. 
         }//end CompareTo implementation
 
 
@@ -44,6 +48,7 @@ namespace EmployeeSortProgram
             return (IComparer <IPayable>)new sortPaymentDescending();
          } 
         //Implementation of the IComparer's Compare method
+
         private class sortPaymentDescending : IComparer <Object> //The type parameter refers to the parameter you will pass into the Compare function
         {
             int IComparer<Object>.Compare(Object o1, Object o2)
@@ -59,6 +64,8 @@ namespace EmployeeSortProgram
                     return 0;                
             } //end Compare
         }//end sortSSNDescending class
+
+
 
         //SELECTION SORT METHOD
         public static void selectSort(IPayable[] arr)

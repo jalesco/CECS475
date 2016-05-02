@@ -1,0 +1,6 @@
+C:\Users\jalex_000\Desktop\CECS475\MidtermReviewProject\MidtermReviewProject\bin\Debug\MidtermReviewProject.exe.config
+C:\Users\jalex_000\Desktop\CECS475\MidtermReviewProject\MidtermReviewProject\bin\Debug\MidtermReviewProject.exe
+C:\Users\jalex_000\Desktop\CECS475\MidtermReviewProject\MidtermReviewProject\bin\Debug\MidtermReviewProject.pdb
+C:\Users\jalex_000\Desktop\CECS475\MidtermReviewProject\MidtermReviewProject\obj\Debug\MidtermReviewProject.csprojResolveAssemblyReference.cache
+C:\Users\jalex_000\Desktop\CECS475\MidtermReviewProject\MidtermReviewProject\obj\Debug\MidtermReviewProject.exe
+C:\Users\jalex_000\Desktop\CECS475\MidtermReviewProject\MidtermReviewProject\obj\Debug\MidtermReviewProject.pdb

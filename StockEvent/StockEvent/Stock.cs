@@ -3,6 +3,15 @@ using System.Threading;
 
 namespace StockEvent
 {
+    //Class that takes in the data to pass the data elsewhere. Takes the data through the public properties
+    //**Inherits from EventArgs since data is being passed in
+    public class EventData : EventArgs
+    {
+        public string stockName { get; set; }
+        public int currentValue { get; set; }
+        public int changes { get; set; }
+    }
+
     class Stock
     {
         private string stockName; //stock's name
@@ -53,7 +62,9 @@ namespace StockEvent
             //RAISE STOCK EVENT WHILE THE THRESHOLD HAS NOT BEEN REACHED
             if ((currentValue - initialValue) > threshold)
             {
-                EventData args = new EventData();
+                //Code that actually raises the event
+                EventData args = new EventData(); //Create an instance of the class getting the data
+                //Assigning the values to the EventData class's properties. 
                 args.stockName = this.stockName;
                 args.currentValue = this.currentValue;
                 args.changes = this.numberOfChanges;
@@ -63,20 +74,12 @@ namespace StockEvent
         }//end ChangeStockValue
 
         //Invokes the event, called whenever the stock changes
+        //The method that invokes the event takes ONE PARAMETER (quiz question)
         protected virtual void OnNotification(EventData e) {
-            EventHandler<EventData> handler = notification;
+            EventHandler<EventData> handler = notification; //create an instance of the event and assign in the event declared
             if (handler != null) {
                 handler(this, e);
             }
         }//end StockChangeReached
-
-
-    }//end class Stock
-    
-    //Class that takes in the data to pass the data elsewhere
-    public class EventData : EventArgs {
-        public string stockName { get; set; }
-        public int currentValue { get; set; }
-        public int changes { get; set; }
-    }
+    }//end class Stock    
 }//end namespace

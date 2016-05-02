@@ -17,7 +17,7 @@ namespace EmployeeSortProgram
             int menuInput; //int for menu input
             bool menu = true; //boolean to keep the menu going
             IPayable [] payableObjects = new IPayable[8];
-            Action<IPayable[]> sort;
+            //Action<IPayable[]> sort;
             payableObjects[0] = new SalariedEmployee("John", "Smith", "111-11-1111", 700M);
             payableObjects[1] = new SalariedEmployee("Antonio", "Smith", "555-55-5555", 800M);
             payableObjects[2] = new SalariedEmployee("Victor", "Smith", "444-44-4444", 600M);
@@ -50,9 +50,9 @@ namespace EmployeeSortProgram
                         }// end foreach loop                        
                         break;
                     case 3: //SORT SSN IN ASCENDING ORDER USING DELEGATE AND SELECTION SORT
-                            //sortDelegate s = selectSort; // Delegate instantiation, points to selection sort
-                            // s(payableObjects); // pass in payableObjects array into delegate
-                        sort = Employee.selectSort;
+                             sortDelegate s = Employee.selectSort; // Delegate instantiation, points to selection sort
+                             s(payableObjects); // pass in payableObjects array into delegate
+                        //sort = Employee.selectSort; //uses Action keyword
                         foreach (IPayable i in payableObjects) {
                             Console.WriteLine((i as Employee).FirstName + " " + (i as Employee).LastName + " " + (i as Employee).ssNum);
                         }                        

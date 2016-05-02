@@ -38,3 +38,13 @@ C:\Users\jalex_000\Desktop\linqquery\BooksExamples\BooksExamples\bin\Debug\Entit
 C:\Users\jalex_000\Desktop\linqquery\BooksExamples\BooksExamples\obj\Debug\BooksExamples.csprojResolveAssemblyReference.cache
 C:\Users\jalex_000\Desktop\linqquery\BooksExamples\BooksExamples\obj\Debug\BooksExamples.dll
 C:\Users\jalex_000\Desktop\linqquery\BooksExamples\BooksExamples\obj\Debug\BooksExamples.pdb
+C:\Users\jalex_000\Desktop\CECS475\linqquery\BooksExamples\BooksExamples\bin\Debug\Books.mdf
+C:\Users\jalex_000\Desktop\CECS475\linqquery\BooksExamples\BooksExamples\bin\Debug\Books_log.ldf
+C:\Users\jalex_000\Desktop\CECS475\linqquery\BooksExamples\BooksExamples\bin\Debug\BooksExamples.dll.config
+C:\Users\jalex_000\Desktop\CECS475\linqquery\BooksExamples\BooksExamples\bin\Debug\BooksExamples.dll
+C:\Users\jalex_000\Desktop\CECS475\linqquery\BooksExamples\BooksExamples\bin\Debug\BooksExamples.pdb
+C:\Users\jalex_000\Desktop\CECS475\linqquery\BooksExamples\BooksExamples\bin\Debug\EntityFramework.dll
+C:\Users\jalex_000\Desktop\CECS475\linqquery\BooksExamples\BooksExamples\bin\Debug\EntityFramework.xml
+C:\Users\jalex_000\Desktop\CECS475\linqquery\BooksExamples\BooksExamples\obj\Debug\BooksExamples.csprojResolveAssemblyReference.cache
+C:\Users\jalex_000\Desktop\CECS475\linqquery\BooksExamples\BooksExamples\obj\Debug\BooksExamples.dll
+C:\Users\jalex_000\Desktop\CECS475\linqquery\BooksExamples\BooksExamples\obj\Debug\BooksExamples.pdb

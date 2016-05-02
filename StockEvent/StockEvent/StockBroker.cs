@@ -21,7 +21,9 @@ namespace StockEvent
 
         //Adds the specific Stock to the StockBroker's 
         public void AddStock(Stock stock) {
+
             stocks.Add(stock);
+            //Call the stock object's public event
                 lock(stock)
                 {
                     stock.notification += BrokerEventHandler; //Event that displays the info to the console
@@ -40,6 +42,12 @@ namespace StockEvent
 
 
         //The StockBroker event handler that displays the broker and stock information 
+
+        //The EVENT LISTENER is usually void or static void and takes in TWO PARAMETERS
+
+        //The parameters are the object sender and the class that is taking in the data
+
+        //The EVENT INVOKER (method that actually raises the event) takes in ONE PARAMETER
         void BrokerEventHandler(object sender, EventData e) {
             Console.WriteLine("Broker Name: {0}  Stock name: {1}  Current value: {2} Number of Changes: {3}", BrokerName, e.stockName, e.currentValue, e.changes) ;
         }// end BrokerEventHandler

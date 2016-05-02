@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.Entity;
@@ -21,13 +22,124 @@ namespace DataAccessLayer
             {
                 context.Entry(entity).State = EntityState.Added;
                 context.SaveChanges();
-            }
-            Console.WriteLine("Passed add and save changes");
+            }      
+            Console.WriteLine("Added and saved");
         }// end Insert
 
+        public void Delete(T entity) {
+            using (context = new SchoolDBEntities())
+            {
+                context.Entry(entity).State = EntityState.Deleted;
+                context.SaveChanges();
+            }
+                Console.WriteLine("Removed record.");
+            
+        }// end Delete
+
+        public void Update(T entity) {
+            using (context = new SchoolDBEntities())
+            {
+                context.Entry(entity).State = EntityState.Modified;
+                context.SaveChanges();
+            }
+                Console.WriteLine("Updated.");            
+        }//end Update
+
+        public IEnumerable<T> GetAll() {
+            return set;
+        }//end GetAll()
+
+        public T GetByID(int id) {
+            return set.Find(id);
+        }
+
+        public IQueryable<T> SearchFor(Expression<Func<T, bool>> predicate)
+        {
+            return set.Where(predicate);
+        }
+
+
+        //parameter for the method is navigationProperties array, however the only thing being passed in is the lambda expression.
+        public T GetSingle(Func<T, bool> where, params Expression<Func<T, object>>[] navigationProperties)
+        {
+            T item = null;
+            using (var context = new SchoolDBEntities())
+            {
+                IQueryable<T> dbQuery = set;
+                //Applying eager loading
+                foreach (Expression<Func<T, object>> navigationProperty in navigationProperties)
+                {
+                    dbQuery = dbQuery.Include<T, object>(navigationProperty);
+                }
+                item = dbQuery.AsNoTracking().FirstOrDefault(where);//Don't track any changes for the selected item 
+            }
+            return item;
+        }//end GetSingle
 
 
 
+        /*
+            public T GetSingle(Expression<Func<T,bool>> where, params Expression<T,object>> [] navigationProperties) {
+         *      T item = null; //item to return
+         *      //Access the database (dbcontext object)
+         *      
+         *      using(context = new SchoolDBEntities()) {
+         *          //Initialize the IQueryable object to the set you want to retrieve data from
+         *          IQueryable<T> dbQuery = set;
+         *          foreach(Expression<T,object>> navigation in navigationProperties) {
+         *              //Iterate through the IQueryable to find the desired information
+         *              dbQuery = dbQuery.Include<T,object>> (navigation);              
+         *          
+         *          }
+         * 
+         *      }
+         *      
+         *       //Assign the results to the item
+         *       item = dbQuery.AsNoTracking().FirstOrDefault(where);
+         *       
+         *       return item;
+         *       
+         * 
+         * In the businesslayer: //Assume I passed in parameter int standardID
+         * 
+         * Student student = new Student();
+         * 
+         * var studentIdentity = _IStudentRepository.GetSingle (o => o.StandardID == standardID);
+         * 
+         * if(studentIdentity != null) {
+         *      student = _IStudentRepository.GetSingle(s => s.StandardID == studentIdentity.standardID);
+         * }
+         * 
+         * }
+         */
 
     }// end class Repository
-}
+
+
+    public interface IStandardRepository : IRepository<Standard>
+    {
+        
+    }
+
+    public interface IStudentRepository : IRepository<Student>
+    {
+
+    }
+
+    public class StandardRepository : Repository <Standard>, IStandardRepository
+    {
+        public StandardRepository() : base(new SchoolDBEntities()) 
+        {
+            
+        } //end constructor
+        
+    }//end class StandardRepository
+
+    public class StudentRepository : Repository <Student>,IStudentRepository
+    {
+        public StudentRepository() : base(new SchoolDBEntities()) {
+            
+        }
+    }//end class StudentRepository
+
+}// end namespace

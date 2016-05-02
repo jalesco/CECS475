@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="DefaultConnection-Web.config Connection String" description="DefaultConnection Connection String used in web.config by the application to access the database." defaultValue="$(ReplacableToken_DefaultConnection-Web.config Connection String_0)" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\jalex_000\\Desktop\\CECS475\\MvcMovie\\MvcMovie\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
+  </parameter>
+  <parameter name="BookDBContext-Web.config Connection String" description="BookDBContext Connection String used in web.config by the application to access the database." defaultValue="$(ReplacableToken_BookDBContext-Web.config Connection String_0)" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\jalex_000\\Desktop\\CECS475\\MvcMovie\\MvcMovie\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='BookDBContext']/@connectionString" />
+  </parameter>
+  <parameter name="MvcMovie.BooksEntities-Web.config Connection String" description="MvcMovie.BooksEntities Connection String used in web.config by the application to access the database." defaultValue="MvcMovie.BooksEntities_ConnectionString" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\jalex_000\\Desktop\\CECS475\\MvcMovie\\MvcMovie\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='MvcMovie.BooksEntities']/@connectionString" />
+  </parameter>
+  <parameter name="BookDBContext_DatabasePublish-Web.config Connection String" description="BookDBContext_DatabasePublish Connection String used in web.config by the application to access the database." defaultValue="BookDBContext_DatabasePublish.ConnetionString" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\jalex_000\\Desktop\\CECS475\\MvcMovie\\MvcMovie\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='BookDBContext_DatabasePublish']/@connectionString" />
+  </parameter>
+</parameters>

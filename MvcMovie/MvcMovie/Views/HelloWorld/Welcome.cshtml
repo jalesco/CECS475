@@ -1,0 +1,17 @@
+﻿@*@{
+    Don't need to have this since the _ViewStart.cshtml controls the layout for all pages
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}*@
+
+
+@{
+    ViewBag.Title = "Welcome";    
+}
+
+<h2>Welcome!</h2>
+
+@* Set a for-loop to display the message based on the number of times specified  *@
+@* What's happening is that the controller is sending data to the ViewBag, and the View is taking the data from the controller and displaying it *@
+@for (int i = 0; i < ViewBag.NumTimes; i++) { 
+    <li style="list-style-type:none">@ViewBag.Message</li>
+}

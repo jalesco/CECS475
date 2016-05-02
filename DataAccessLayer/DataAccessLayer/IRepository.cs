@@ -10,7 +10,12 @@ namespace DataAccessLayer
     public interface IRepository <T>
     {
         void Insert(T entity);
-
+        void Delete(T entity);
+        void Update(T entity);
+        IEnumerable<T> GetAll();
+        T GetByID(int id);
+        IQueryable<T> SearchFor(Expression<Func<T, bool>> predicate);
+        T GetSingle(Func<T, bool> where, params Expression<Func<T, object>>[] navigationProperties);
 
 
     }// end interface

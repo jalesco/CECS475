@@ -1,5 +1,7 @@
 ﻿// JoiningTableData.cs
 // Using LINQ to perform a join and aggregate data across tables.
+//LAB 4: LINQ Queries
+
 using System;
 using System.Linq;
 using System.Windows.Forms;
@@ -19,26 +21,21 @@ namespace JoinQueries
          BooksExamples.BooksEntities dbcontext =
             new BooksExamples.BooksEntities();
 
-         // get authors and ISBNs of each book they co-authored
-         //var authorsAndISBNs =
-         //   from author in dbcontext.Authors
-         //   from book in author.Titles
-         //   orderby author.LastName, author.FirstName
-         //   select new { author.FirstName, author.LastName, book.ISBN };
+         var allISBN = from book in dbcontext.Titles
+                       orderby book.Title1
+                       select new
+                       {
+                           book.ISBN,
+                           book.Title1
+                       };
 
-         //outputTextBox.AppendText( "Authors and ISBNs:" );
+         foreach (var element in allISBN) {
+             outputTextBox.AppendText(element.ISBN + ", " + element.Title1 + "\n");
+         }
 
-         //// display authors and ISBNs in tabular format
-         //foreach ( var element in authorsAndISBNs )
-         //{
-         //   outputTextBox.AppendText(
-         //      String.Format( "\r\n\t{0,-10} {1,-10} {2,-10}",
-         //         element.FirstName, element.LastName, element.ISBN ) );
-         //} // end foreach
-
-         // get authors and titles of each book they co-authored (sort by title)
+          //1) Gets the titles of the books and the authors that wrote them. LINQ Query with multiple tables
          var authorsAndTitles =
-            from book in dbcontext.Titles
+            from book in dbcontext.Titles //accesses the Titles table in the database
             from author in book.Authors
             orderby book.Title1
             select new { author.FirstName, author.LastName,
@@ -54,7 +51,7 @@ namespace JoinQueries
                   element.FirstName, element.LastName, element.Title1 ) );
          } // end foreach
 
-          //Sort by title, then author last name and first name
+          //2) Sort by title, then author last name and first name
          var sortedAuthorsWithTitles =
            from book in dbcontext.Titles
            from author in book.Authors
@@ -76,21 +73,23 @@ namespace JoinQueries
                    element.FirstName, element.LastName, element.Title1));
          } // end foreach
 
+         // 3) get authors and titles of each book they co-authored; group by author
 
-
-
-
-         // get authors and titles of each book 
-         // they co-authored; group by author
+          /*
+           Steps: 
+           * 1) Create a new object to hold LINQ object
+           * 2) Retrieve the data from the Titles table from the database
+           */
          var titlesByAuthor =
             from book in dbcontext.Titles
             orderby book.Title1
+
             select new { 
                Name = book.Title1,
 
                Titles =
                   from authors in book.Authors
-                  orderby authors.LastName, authors.FirstName //sorted in order from left to right (so sort by last name, then first name)                  
+                  orderby authors.LastName, authors.FirstName                 
                   select authors.FirstName + " " + authors.LastName
             };
 

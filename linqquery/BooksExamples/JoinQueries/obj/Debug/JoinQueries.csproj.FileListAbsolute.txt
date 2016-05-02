@@ -60,3 +60,15 @@ C:\Users\jalex_000\Desktop\linqquery\BooksExamples\JoinQueries\obj\Debug\JoinQue
 C:\Users\jalex_000\Desktop\CECS475\linqquery\BooksExamples\JoinQueries\bin\Debug\JoinQueries.exe.config
 C:\Users\jalex_000\Desktop\CECS475\linqquery\BooksExamples\JoinQueries\obj\Debug\JoinQueries.exe
 C:\Users\jalex_000\Desktop\CECS475\linqquery\BooksExamples\JoinQueries\obj\Debug\JoinQueries.pdb
+C:\Users\jalex_000\Desktop\CECS475\linqquery\BooksExamples\JoinQueries\bin\Debug\Books.mdf
+C:\Users\jalex_000\Desktop\CECS475\linqquery\BooksExamples\JoinQueries\bin\Debug\Books_log.ldf
+C:\Users\jalex_000\Desktop\CECS475\linqquery\BooksExamples\JoinQueries\bin\Debug\JoinQueries.exe
+C:\Users\jalex_000\Desktop\CECS475\linqquery\BooksExamples\JoinQueries\bin\Debug\JoinQueries.pdb
+C:\Users\jalex_000\Desktop\CECS475\linqquery\BooksExamples\JoinQueries\bin\Debug\BooksExamples.dll
+C:\Users\jalex_000\Desktop\CECS475\linqquery\BooksExamples\JoinQueries\bin\Debug\EntityFramework.dll
+C:\Users\jalex_000\Desktop\CECS475\linqquery\BooksExamples\JoinQueries\bin\Debug\BooksExamples.pdb
+C:\Users\jalex_000\Desktop\CECS475\linqquery\BooksExamples\JoinQueries\bin\Debug\EntityFramework.xml
+C:\Users\jalex_000\Desktop\CECS475\linqquery\BooksExamples\JoinQueries\obj\Debug\JoinQueries.csprojResolveAssemblyReference.cache
+C:\Users\jalex_000\Desktop\CECS475\linqquery\BooksExamples\JoinQueries\obj\Debug\JoinQueries.JoiningTableData.resources
+C:\Users\jalex_000\Desktop\CECS475\linqquery\BooksExamples\JoinQueries\obj\Debug\JoinQueries.Properties.Resources.resources
+C:\Users\jalex_000\Desktop\CECS475\linqquery\BooksExamples\JoinQueries\obj\Debug\JoinQueries.csproj.GenerateResource.Cache

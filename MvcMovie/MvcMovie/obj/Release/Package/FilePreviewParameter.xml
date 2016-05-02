@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="mvcmovietitles" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\jalex_000\\Desktop\\CECS475\\MvcMovie\\MvcMovie\\obj\\Release\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^C:\\Users\\jalex_000\\Desktop\\CECS475\\MvcMovie\\MvcMovie\\obj\\Release\\Package\\PackageTmp$" />
+  </parameter>
+  <parameter name="BookDBContext-Web.config Connection String" description="" value="Data Source=(LocalDB)\v11.0;AttachDbFilename=C:\Users\jalex_000\Desktop\CECS475\MvcMovie\MvcMovie\App_Data\Books.mdf;Integrated Security=True" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\jalex_000\\Desktop\\CECS475\\MvcMovie\\MvcMovie\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='BookDBContext']/@connectionString" />
+  </parameter>
+  <parameter name="DefaultConnection-Web.config Connection String" description="" value="Data Source=(LocalDB)\v11.0;AttachDbFilename=C:\Users\jalex_000\Desktop\CECS475\MvcMovie\MvcMovie\App_Data\Books.mdf;Integrated Security=True" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\jalex_000\\Desktop\\CECS475\\MvcMovie\\MvcMovie\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
+  </parameter>
+  <parameter name="MvcMovie.BooksEntities-Web.config Connection String" description="" value="MvcMovie.BooksEntities_ConnectionString" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\jalex_000\\Desktop\\CECS475\\MvcMovie\\MvcMovie\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='MvcMovie.BooksEntities']/@connectionString" />
+  </parameter>
+</parameters>

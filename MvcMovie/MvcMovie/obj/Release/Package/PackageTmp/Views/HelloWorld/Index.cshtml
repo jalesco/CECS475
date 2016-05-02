@@ -1,0 +1,14 @@
+﻿@*@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}*@
+
+@* NOTE: A VIEW FILE SHOULD NEVER PERFORM ANY BUSINESS LOGIC OR INTERACT WITH A DATABASE DIRECTLY *@
+@* View templates should only work with data provided by the controllers *@
+
+@{
+    ViewBag.Title = "Movie List";
+}
+@* When there is no template file specified in the controller, then it will default to the Index.cshtml template file in the View folder *@
+<h2> My Movie List </h2>
+<p>Hello from our view template!</p>
+
