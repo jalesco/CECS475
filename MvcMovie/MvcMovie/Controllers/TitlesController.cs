@@ -16,17 +16,7 @@ namespace MvcMovie.Controllers
 
         // GET: /Titles (works) this is the default method that is called when we put in the url for Titles
         public ActionResult Index(string copySearch,string searchString)
-        {
-            
-
-            ////Search by copyright. Will retrieve a list of all the copyrights, then stores it into a list
-            //var subjectLst = new List<string>();
-            //var subjectQuery = from c in db.Titles
-            //                orderby c.Subject
-            //                select c.Subject;
-
-            //subjectLst.AddRange(subjectQuery.Distinct());
-            //ViewBag.Subject = new SelectList(subjectLst); //populates dropdown list
+        {          
 
             //query is defined but hasn't been run through the database
             var titles = from t in db.Titles
@@ -36,12 +26,6 @@ namespace MvcMovie.Controllers
             if (!string.IsNullOrEmpty(searchString)) {
                 titles = titles.Where(s => s.Title.Contains(searchString));
             }
-
-            ////Searches depending on copyright year
-            //if (!string.IsNullOrEmpty(copySearch))
-            //{
-            //    titles = titles.Where(s => s.Subject == copySearch);
-            //}
 
             return View(titles); //returns the title list
         }//end Index()

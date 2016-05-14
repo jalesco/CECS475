@@ -75,44 +75,6 @@ namespace DataAccessLayer
             }
             return item;
         }//end GetSingle
-
-
-
-        /*
-            public T GetSingle(Expression<Func<T,bool>> where, params Expression<T,object>> [] navigationProperties) {
-         *      T item = null; //item to return
-         *      //Access the database (dbcontext object)
-         *      
-         *      using(context = new SchoolDBEntities()) {
-         *          //Initialize the IQueryable object to the set you want to retrieve data from
-         *          IQueryable<T> dbQuery = set;
-         *          foreach(Expression<T,object>> navigation in navigationProperties) {
-         *              //Iterate through the IQueryable to find the desired information
-         *              dbQuery = dbQuery.Include<T,object>> (navigation);              
-         *          
-         *          }
-         * 
-         *      }
-         *      
-         *       //Assign the results to the item
-         *       item = dbQuery.AsNoTracking().FirstOrDefault(where);
-         *       
-         *       return item;
-         *       
-         * 
-         * In the businesslayer: //Assume I passed in parameter int standardID
-         * 
-         * Student student = new Student();
-         * 
-         * var studentIdentity = _IStudentRepository.GetSingle (o => o.StandardID == standardID);
-         * 
-         * if(studentIdentity != null) {
-         *      student = _IStudentRepository.GetSingle(s => s.StandardID == studentIdentity.standardID);
-         * }
-         * 
-         * }
-         */
-
     }// end class Repository
 
 

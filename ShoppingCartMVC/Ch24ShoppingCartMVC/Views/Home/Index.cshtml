@@ -1,5 +1,5 @@
 ﻿@{  //INITIALIZE web page title to Shopping Cart
-    ViewBag.Title = "Shopping Cart";
+    ViewBag.Title = "Home";
     string day = DateTime.Now.DayOfWeek.ToString();
 }
 @section css {
@@ -8,11 +8,10 @@
 @*Display 
 Welcome to the Halloween Store
 Thank you for visiting us this beautiful CURRENT DAY!*@
-<h1>_________________________</h1>
-<div>___________________________________</div>
+<h1> Welcome to the Halloween Store! </h1>
+<div>Thank you for visting us this beautiful @day</div>
 
 @section footer {
-    @*Display
-    Where every day is Halloween!*@
-    <p>___________________________________</p>
+    @*  Display where every day is Halloween!*@
+    <p>Where every day is Halloween! </p>
 }

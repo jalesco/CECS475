@@ -1,0 +1,47 @@
+﻿@model Ch24ShoppingCartMVC.Models.CartViewModel
+
+@{
+    ViewBag.Title = "Checkout";
+}
+
+@section css {
+    <link href="~/Content/Cart.css" rel="stylesheet" />
+}
+
+
+<h2> Checkout Page </h2>
+<br/>
+
+@* Code to display the items in the cart*@
+<select multiple="multiple">
+    @foreach (var item in Model.Cart)
+    {
+        <option> @item.Display() </option>
+    }
+
+</select>
+
+
+<br />
+<br />
+<br />
+
+<h2> Order Checkout Form</h2>
+<br />
+@*Code to display form for customer info*@
+<label for="customer_first"> First Name: </label>
+<input name="customer_first" />
+<br />
+<br />
+<label for="customer_last"> Last Name: </label>
+<input name="customer_last" />
+<br />
+<br />
+<label for="customer_phone"> Phone: </label>
+<input name="customer_phone" />
+<br />
+<br />
+<label for="customer_email"> Email: </label>
+<input name="customer_email" />
+<br />
+<br />

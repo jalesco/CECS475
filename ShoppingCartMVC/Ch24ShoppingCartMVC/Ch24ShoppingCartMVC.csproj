@@ -129,12 +129,14 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\CartController.cs" />
+    <Compile Include="Controllers\CheckoutController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\OrderController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\CartModel.cs" />
+    <Compile Include="Models\CheckoutModel.cs" />
     <Compile Include="Models\DataAccess\Halloween.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -284,6 +286,7 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="TempCSS\Cart.css" />
+    <Content Include="TempCSS\Checkout.css" />
     <Content Include="TempCSS\Home.css" />
     <Content Include="TempCSS\Main.css" />
     <Content Include="TempCSS\Order.css" />
@@ -302,6 +305,7 @@
     <Content Include="Views\Order\Index.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Checkout\CheckoutPage.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
