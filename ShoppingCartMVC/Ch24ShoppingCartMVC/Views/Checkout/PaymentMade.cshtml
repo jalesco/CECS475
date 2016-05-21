@@ -1,0 +1,19 @@
+﻿@model Ch24ShoppingCartMVC.Models.CartViewModel
+@{
+    ViewBag.Title = "Checkout";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section css {
+    <link href="~/Content/Checkout.css" rel="stylesheet" />
+}
+
+
+<p> <br/>Thank you for your order. You will receive a confirmation e-mail shortly.<br/>
+If you have any questions about your order, please open a support ticket from your client area and quote your order number.</p>
+
+@section footer {
+    @*Display
+        Where every day is Halloween!*@
+    <p>Where every day is Halloween!</p>
+}

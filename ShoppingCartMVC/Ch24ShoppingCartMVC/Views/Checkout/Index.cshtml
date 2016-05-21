@@ -1,0 +1,421 @@
+﻿@model Ch24ShoppingCartMVC.Models.CartViewModel
+@{
+    ViewBag.Title = "Checkout";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    decimal subtotal = 0, tax = 0;
+    decimal itemsubtotal = 0;
+    DateTime todaysDate = DateTime.Now;
+}
+
+@section css {
+    <link href="~/Content/Checkout.css" rel="stylesheet" />
+}
+
+<h2>Your Cart: </h2>
+<br/>
+<table id="cartCheckout"border="1">
+    <tr>
+        <th> Item </th>
+        <th> Quantity</th>
+        <th> Price Per Stack</th>
+    </tr>
+    
+    @foreach (var item in Model.Cart)
+    {
+        itemsubtotal = item.UnitPrice * item.Quantity;
+        
+        <tr>
+            <td>@item.Name</td>
+            <td>@item.Quantity</td>
+            <td>@itemsubtotal.ToString("c")</td>
+
+        </tr>  
+        
+    }
+</table>
+<br />
+<br />
+
+
+<div id="contentWrapper">
+    <div id="secondaryContent" style="margin-top:32px;border-radius:10px; border-color:#cf000f;">
+        <h3 style="padding-left:5px; margin-top:5px;">Order Summary</h3>
+        <text style="margin-top:0px;">
+            <!--Get the subtotal of all items in the cart-->
+            @if (Model.Cart.Count == 0)
+            {
+                <p>Nothing in your cart yet.</p>
+            }
+            else
+            {
+                
+                //Calculate the subtotal
+                foreach (var item in Model.Cart)
+                {
+                    subtotal += item.UnitPrice * item.Quantity;
+                }
+                //Calculate tax and total cost
+                tax = Convert.ToDecimal(0.09) * subtotal;
+                    <!--Display the subtotal-->
+                <p style="text-align:right; padding-right:10px;">Subtotal: @subtotal.ToString("C")</p>
+            }
+            <p id="shippingCost" style="text-align:right; padding-right:10px;">Shipping: </p>
+            <p style="text-align:right; padding-right:10px;">Sales Tax: @tax.ToString("C")</p>
+            <p id="totalCost" style="text-align:right; padding-right:10px;">Total: </p>
+        </text>
+    </div>
+
+
+
+    <div id="primaryContent">
+        <h3></h3>
+        <form method="get">
+            <!--Shipping Information-->
+            <fieldset>
+                <legend>Shipping Information</legend>
+                <div id="divName">
+                    <label for="txtFirstName">First Name</label>
+                    <input type="text" id="txtFirstName" required/>
+                </div>
+
+                <div style="float:left;">
+                    <label for="txtLastName">Last Name</label>
+                    <input type="text" id="txtLastName" required/>
+                </div>
+
+                <br style="clear:both" />
+
+                <label class="title" for="txtAddress">Address</label>
+                <input class="inputText" type="text" id="txtAddress" required/>
+
+                <div style="float:left; margin-top:10px; margin-right:21px;">
+                    <label for="txtCity">City</label>
+                    <input type="text" id="txtCity" size="19" required/>
+                </div>
+
+                <div style="float:left; margin-top:10px; margin-right:21px;">
+                    <label for="selectState">State</label>
+                    <select name="selectState">
+                        <option value="AL">AL</option>
+                        <option value="AK">AK</option>
+                        <option value="AZ">AZ</option>
+                        <option value="AR">AR</option>
+                        <option value="CA">CA</option>
+                        <option value="CO">CO</option>
+                        <option value="CT">CT</option>
+                        <option value="DE">DE</option>
+                        <option value="FL">FL</option>
+                        <option value="GA">GA</option>
+                        <option value="HI">HI</option>
+                        <option value="ID">ID</option>
+                        <option value="IL">IL</option>
+                        <option value="IN">IN</option>
+                        <option value="IA">IA</option>
+                        <option value="KS">KS</option>
+                        <option value="KY">KY</option>
+                        <option value="LA">LA</option>
+                        <option value="ME">ME</option>
+                        <option value="MD">MD</option>
+                        <option value="MA">MA</option>
+                        <option value="MI">MI</option>
+                        <option value="MN">MN</option>
+                        <option value="MS">MS</option>
+                        <option value="MO">MO</option>
+                        <option value="MT">MT</option>
+                        <option value="NE">NE</option>
+                        <option value="NV">NV</option>
+                        <option value="NH">NH</option>
+                        <option value="NJ">NJ</option>
+                        <option value="NM">NM</option>
+                        <option value="NY">NY</option>
+                        <option value="NC">NC</option>
+                        <option value="ND">ND</option>
+                        <option value="OH">OH</option>
+                        <option value="OK">OK</option>
+                        <option value="OR">OR</option>
+                        <option value="PA">PA</option>
+                        <option value="RI">RI</option>
+                        <option value="SC">SC</option>
+                        <option value="SD">SD</option>
+                        <option value="TN">TN</option>
+                        <option value="TX">TX</option>
+                        <option value="UT">UT</option>
+                        <option value="VT">VT</option>
+                        <option value="VA">VA</option>
+                        <option value="WA">WA</option>
+                        <option value="WV">WV</option>
+                        <option value="WI">WI</option>
+                        <option value="WY">WY</option>
+                        <option value="AS">AS</option>
+                        <option value="DC">DC</option>
+                        <option value="GU">GU</option>
+                        <option value="PR">PR</option>
+                        <option value="VI">VI</option>
+                        <option value="AA">AA</option>
+                        <option value="AE">AE</option>
+                        <option value="AP">AP</option>
+                    </select>
+                </div>
+
+                <div style="float:left; margin-top:10px;">
+                    <label for="txtZipcode">ZIP Code</label>
+                    <input type="text" id="txtZipcode" onkeypress="return event.charCode >= 48 && event.charCode <= 57" maxlength="5" size="5" required/>
+                </div>
+
+                <br style="clear:both" />
+
+                <label class="title" for="txtEmail">Email Address</label>
+                <input class="inputText" type="text" id="txtEmail" required/>
+
+                <label class="title" for="txtPhone">Phone Number</label>
+                <input type="text" onkeypress="return event.charCode >= 48 && event.charCode <= 57" maxlength="10" size="10" required/>
+            </fieldset>
+
+            <!--Billing Information-->
+            <fieldset style="margin-top:20px;">
+                <legend>Billing Information</legend>
+
+                <label for="txtBillingName">Name on Card</label>
+                <input type="text" id="txtBillingName" required/>
+
+                <label class="title" for="txtBillingAddress">Billing Address</label>
+                <input class="inputText" type="text" id="txtBillingAddress" required/>
+
+                <div style="float:left; margin-top:10px; margin-right:21px;">
+                    <label for="txtBillingCity">City</label>
+                    <input type="text" id="txtBillingCity" size="19" required/>
+                </div>
+
+                <div style="float:left; margin-top:10px; margin-right:21px;">
+                    <label for="selectBillingState">State</label>
+                    <select name="selectBillingState">
+                        <option value="AL">AL</option>
+                        <option value="AK">AK</option>
+                        <option value="AZ">AZ</option>
+                        <option value="AR">AR</option>
+                        <option value="CA">CA</option>
+                        <option value="CO">CO</option>
+                        <option value="CT">CT</option>
+                        <option value="DE">DE</option>
+                        <option value="FL">FL</option>
+                        <option value="GA">GA</option>
+                        <option value="HI">HI</option>
+                        <option value="ID">ID</option>
+                        <option value="IL">IL</option>
+                        <option value="IN">IN</option>
+                        <option value="IA">IA</option>
+                        <option value="KS">KS</option>
+                        <option value="KY">KY</option>
+                        <option value="LA">LA</option>
+                        <option value="ME">ME</option>
+                        <option value="MD">MD</option>
+                        <option value="MA">MA</option>
+                        <option value="MI">MI</option>
+                        <option value="MN">MN</option>
+                        <option value="MS">MS</option>
+                        <option value="MO">MO</option>
+                        <option value="MT">MT</option>
+                        <option value="NE">NE</option>
+                        <option value="NV">NV</option>
+                        <option value="NH">NH</option>
+                        <option value="NJ">NJ</option>
+                        <option value="NM">NM</option>
+                        <option value="NY">NY</option>
+                        <option value="NC">NC</option>
+                        <option value="ND">ND</option>
+                        <option value="OH">OH</option>
+                        <option value="OK">OK</option>
+                        <option value="OR">OR</option>
+                        <option value="PA">PA</option>
+                        <option value="RI">RI</option>
+                        <option value="SC">SC</option>
+                        <option value="SD">SD</option>
+                        <option value="TN">TN</option>
+                        <option value="TX">TX</option>
+                        <option value="UT">UT</option>
+                        <option value="VT">VT</option>
+                        <option value="VA">VA</option>
+                        <option value="WA">WA</option>
+                        <option value="WV">WV</option>
+                        <option value="WI">WI</option>
+                        <option value="WY">WY</option>
+                        <option value="AS">AS</option>
+                        <option value="DC">DC</option>
+                        <option value="GU">GU</option>
+                        <option value="PR">PR</option>
+                        <option value="VI">VI</option>
+                        <option value="AA">AA</option>
+                        <option value="AE">AE</option>
+                        <option value="AP">AP</option>
+                    </select>
+                </div>
+
+                <div style="float:left; margin-top:10px;">
+                    <label for="txtBillingZipcode">ZIP Code</label>
+                    <input type="text" id="txtBillingZipcode" onkeypress="return event.charCode >= 48 && event.charCode <= 57" maxlength="5" size="5" required/>
+                </div>
+
+                <br style="clear:both" />
+                <div style="float:left; margin-top:10px; margin-right:21px;">
+                    <label class="title" for="txtCardNumber">Card Number</label>
+                    <input type="text" id="txtCardNumber" onkeypress="return event.charCode >= 48 && event.charCode <= 57" min="1000000000000000" maxlength="16" size="16" required/>
+                </div>
+
+                <div style="float:left; margin-top:10px;">
+                    <label class="title" for="selectCardType">Card Type</label>
+                    <select name="selectCardType">
+                        <option value="vs">Visa</option>
+                        <option value="mc">Master Card</option>
+                        <option value="ae">American Express</option>
+                        <option value="dc">Discover</option>
+                    </select>
+                </div>
+
+                <br style="clear:both" />
+
+                <div style="float: left; margin-top:10px; margin-right:21px;">
+                    <label class="title" for="txtExpDate">Expiration Date</label>
+                    <input type="month" id="txtExpDate" required/>
+                </div>
+
+                <div style="float: left; margin-top:10px;">
+                    <label class="title" for="txtSecCode">Security Code</label>
+                    <input type="text" id="txtSecCode" onkeypress="return event.charCode >= 48 && event.charCode <= 57" maxlength="3" size="3" required/>
+                </div>
+
+                <br style="clear:both" />
+            </fieldset>
+
+            <!--Shipping Method-->
+
+            <fieldset>
+                <legend>Shipping Method</legend>
+                <ng-form>
+                    <input type="radio" name="shippingMethod" id="rbtnFree"style="float:left;" onchange="calculateShipping('free')" checked="checked">
+                        <text style="color:#019875;">
+                            <b>&nbsp; &nbsp;
+                                Arrived by @{
+                                    DateTime temp = todaysDate.AddDays(15);
+                                    string arrivalDate = temp.GetDateTimeFormats('D').ElementAt(0);
+                                }
+                                @arrivalDate.ToString()
+                            </b>
+                            <p style="font-size:10px; margin-top:0px; color:black;">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                Free Standard Shipping
+                            </p>
+                        </text>
+                    
+
+                    </input>
+                    <input type="radio" name="shippingMethod" id="rbtnExpedited" style="float:left;" onchange="calculateShipping('expedited')">
+                        <text style=" color:#019875;">
+                            <b>
+                                &nbsp; &nbsp;
+                                Arrived by @{
+                                    temp = todaysDate.AddDays(7);
+                                    arrivalDate = temp.GetDateTimeFormats('D').ElementAt(0);
+                                }
+                                @arrivalDate.ToString()
+                            </b>
+                            <p style="font-size:10px; margin-top:0px; color:black;">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                Expedited Shipping
+                            </p>
+                        </text>
+                    </input>
+                    <input type="radio" name="shippingMethod" id="rbtnTwoDays" style=" float:left;"onchange="calculateShipping('twoDays')">
+                        <text style=" color:#019875;">
+                            <b>
+                                &nbsp; &nbsp;
+                                Arrived by @{
+                                    temp = todaysDate.AddDays(2);
+                                    arrivalDate = temp.GetDateTimeFormats('D').ElementAt(0);
+                                }
+                                @arrivalDate.ToString()
+                            </b>
+                            <p style="font-size:10px; margin-top:0px; color:black;">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                Two-Day Shipping
+                            </p>
+                        </text>
+                    </input>
+                    <input type="radio" name="shippingMethod" id="rbtnOneDay" style="float:left;" onchange="calculateShipping('oneDay')">
+                        <text style=" color:#019875;">
+                            <b>
+                                &nbsp; &nbsp;
+                                Arrived by @{
+                                    temp = todaysDate.AddDays(1);
+                                    arrivalDate = temp.GetDateTimeFormats('D').ElementAt(0);
+                                }
+                                @arrivalDate.ToString()
+                            </b>
+                            <p style="font-size:10px; margin-top:0px; color:black;">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                One-Day Shipping
+                            </p>
+                        </text>
+                    </input>
+                </ng-form>
+            </fieldset> 
+                     
+        </form>        
+    </div>
+    <div style="margin-top:50px; margin-right:7px; float:right; padding-right:100px">
+        @using (Html.BeginForm("PaymentMade", "Checkout", FormMethod.Get))
+        {
+            <br />
+            <input type="submit" id="btnPlaceOrder" value=" Place Your Order " />
+        }
+    </div>@**End of submit button div*@  
+    
+    
+</div>
+
+<script type="text/javascript">
+    var lblShippingCost = document.getElementById("shippingCost");
+    var lblTotalCost = document.getElementById("totalCost");
+
+    var shipping = 0, total = 0;
+
+    window.onload = function () {
+        shipping = 0;
+        calculateTotalCost();
+    };
+    function calculateShipping(smethodPar) {
+        if (smethodPar == "free") {
+            shipping = 0;
+        }
+        else if (smethodPar == "expedited") {
+            shipping = 7.99;
+        }
+        else if (smethodPar == "twoDays") {
+            shipping = 14.99;
+        }
+        else if (smethodPar == "oneDay") {
+            shipping = 24.99;
+        }
+
+        calculateTotalCost();
+    }
+
+    function calculateTotalCost(){
+        total = @subtotal + shipping + @tax;
+        displayCosts();
+    }
+
+    function displayCosts(){
+        lblShippingCost.innerHTML = "Shipping: $" + shipping.toFixed(2);
+        lblTotalCost.innerHTML = "Total: $" + total.toFixed(2);
+    }
+
+    
+
+</script>
+
+
+@section footer {
+    @*Display
+        Where every day is Halloween!*@
+    <p>Where every day is Halloween!</p>
+}

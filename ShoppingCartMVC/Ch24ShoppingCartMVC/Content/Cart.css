@@ -27,3 +27,13 @@ when the user clicks the button to check out */
 #message {
     color: Green;
 }
+
+#btnCheckout{
+    background-color: #2ecc71;
+    color: white;
+    border-style: none;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}

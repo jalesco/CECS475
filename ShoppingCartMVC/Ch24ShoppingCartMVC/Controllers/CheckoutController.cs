@@ -9,20 +9,14 @@ namespace Ch24ShoppingCartMVC.Controllers
 {
     public class CheckoutController : Controller
     {
-        //
-        // GET: /Checkout/
+        //Declaration
         private CartModel cart = new CartModel();
 
         [HttpGet]
-        public RedirectToRouteResult Index()
+        public ViewResult Index()
         {
-            return RedirectToAction("CheckoutPage/");
-        }//end Index
-
-        [HttpGet] //just retrieving the data from the server
-        public ViewResult CheckoutPage()
-        {
-            CartViewModel model = (CartViewModel)TempData["cart"];
+            //Get all items in the cart, and store them in a new CartViewModel object
+            CartViewModel model = (CartViewModel)TempData["cart"]; //allows the data in the cart to persist. Storing the CartViewModel cart into a TempData object
             //if the model is null, then call the method GetCart
             if (model == null)
             {
@@ -30,24 +24,12 @@ namespace Ch24ShoppingCartMVC.Controllers
             }
             //Passing model to View
             return View(model);
-        } //end List()
+        }
 
-        [HttpPost]
-        public RedirectToRouteResult CheckoutPage(OrderViewModel order)
+        [HttpGet]
+        public ViewResult PaymentMade()
         {
-            CartViewModel model = cart.GetCart(order.SelectedProduct.ProductID);
-            //Assign the quantity of the selected product to the quantity of the added product
-            model.AddedProduct.Quantity = order.SelectedProduct.Quantity;
-            //Call the method AddtoCart
-            cart.AddToCart(model);
-            //Assign model to the TempData
-            TempData["cart"] = model;
-            return RedirectToAction("CheckoutPage", "Checkout");
-        }//end List
-        
-
-
-
-
-    }//end class
-}//end namespace
+            return View();
+        }
+    }
+}

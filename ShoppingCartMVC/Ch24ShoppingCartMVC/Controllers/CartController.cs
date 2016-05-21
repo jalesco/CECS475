@@ -5,8 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using Ch24ShoppingCartMVC.Models;
 
-namespace Ch24ShoppingCartMVC.Controllers
-{
+namespace Ch24ShoppingCartMVC.Controllers {
     public class CartController : Controller
     {
         private CartModel cart = new CartModel();
@@ -14,22 +13,19 @@ namespace Ch24ShoppingCartMVC.Controllers
         [HttpGet]
         public RedirectToRouteResult Index()
         {
-            return RedirectToAction("CheckoutPage/"); //need to ask how to we know which List action method will be called
-        }//end Index()
-
-        [HttpGet] //just retrieving the data from the server
+            return RedirectToAction("List/");
+        }
+        [HttpGet]
         public ViewResult List()
         {
             CartViewModel model = (CartViewModel)TempData["cart"];
             //if the model is null, then call the method GetCart
-            if (model == null)
-            {
+            if(model == null){
                 model = cart.GetCart();
             }
             //Passing model to View
             return View(model);
-        } //end List()
-
+        }
         [HttpPost]
         public RedirectToRouteResult List(OrderViewModel order)
         {
@@ -39,9 +35,9 @@ namespace Ch24ShoppingCartMVC.Controllers
             //Call the method AddtoCart
             cart.AddToCart(model);
             //Assign model to the TempData
-            TempData["cart"] = model;
-            return RedirectToAction("CheckoutPage", "Checkout");
+            TempData["cart"] = model; //allows the data from the variable model 
+            return RedirectToAction("List", "Cart");
         }
-
+       
     }
 }

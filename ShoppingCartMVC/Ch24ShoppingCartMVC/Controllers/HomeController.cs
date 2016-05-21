@@ -20,6 +20,6 @@ namespace Ch24ShoppingCartMVC.Controllers {
             ContactViewModel model = new ContactViewModel();
             //Pass model to View
             return View(model);
-        }//end Contact()
-    }//end class
-}//end namespace
+        }
+    }
+}

@@ -136,7 +136,6 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\CartModel.cs" />
-    <Compile Include="Models\CheckoutModel.cs" />
     <Compile Include="Models\DataAccess\Halloween.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -168,6 +167,7 @@
       <DependentUpon>Halloween.mdf</DependentUpon>
     </Content>
     <Content Include="Content\Cart.css" />
+    <Content Include="Content\Checkout.css" />
     <Content Include="Content\Home.css" />
     <Content Include="Content\Images\banner.jpg" />
     <Content Include="Content\Images\Products\arm1.jpg" />
@@ -286,7 +286,6 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="TempCSS\Cart.css" />
-    <Content Include="TempCSS\Checkout.css" />
     <Content Include="TempCSS\Home.css" />
     <Content Include="TempCSS\Main.css" />
     <Content Include="TempCSS\Order.css" />
@@ -305,7 +304,8 @@
     <Content Include="Views\Order\Index.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Checkout\CheckoutPage.cshtml" />
+    <Content Include="Views\Checkout\Index.cshtml" />
+    <Content Include="Views\Checkout\PaymentMade.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

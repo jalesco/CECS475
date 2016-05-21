@@ -10,19 +10,15 @@ namespace Ch24ShoppingCartMVC.Models {
     public class OrderModel
     {
         private List<ProductViewModel> products;
-
         //Implement GetAllProductsFromDataStore
         public List<Product> GetAllProductsFromDataStore()
         {    
             using (HalloweenEntities data = new HalloweenEntities())
             {  //get all the products from the Collection Products order by name using HalloweenEntities
-                return data.Products.ToList();
+                return data.Products.OrderBy(s => s.Name).ToList<Product>();
             }
-        }//end GetAllProductsFromDataStore()
-
-
+        }
         //Implement the method ConvertToViewModel
-        //This is for getting only the information about Product objects that we want
         private ProductViewModel ConvertToViewModel(Product product)
         {
             ProductViewModel model = new ProductViewModel();
@@ -33,51 +29,44 @@ namespace Ch24ShoppingCartMVC.Models {
             model.LongDescription = product.LongDescription;
             model.UnitPrice = product.UnitPrice;
             model.ImageFile = product.ImageFile;
+            model.Quantity = 1;
+
             return model;
-        }//end ConvertToViewModel()
-
-
+        }
         //Implement the method GetProductList
         public List<ProductViewModel> GetProductsList() {
-            if (this.products == null) {
+            if (this.products == null)
                 //Call the method GetAllProducts
-                this.products = GetAllProducts();
-            }//end if                
+                products = GetAllProducts();
             //Return the products
-            return this.products;
-        }//end GetProductsList()
-
+            return products;
+        }
         public List<ProductViewModel> GetAllProducts()
         {
             List<ProductViewModel> productmodels = new List<ProductViewModel>();
             // Call the GetAllProductsFromDataStore()
-            List<Product> products = GetAllProductsFromDataStore();
-            
-            foreach (Product p in products)
+            List<Product> storeProducts = GetAllProductsFromDataStore();
+            foreach (Product p in storeProducts)
             {  //Call the method ConvertToViewModel to convert p and pass the method ConvertToViewModel to the method add of the productmodels
-                //This will iterate through the list of the Products, convert to the view model, then add them to the productmodels list
                 productmodels.Add(ConvertToViewModel(p));
             }
             return productmodels;
-        }//end GetAllProducts()
+        }
         
         public Product GetProductByIdFromDataStore(string id)
         {
             using (HalloweenEntities data = new HalloweenEntities())
             {  //Get a product from Products of data where ProductID is matched with id parameter
-                return data.Products.Where(p => p.ProductID == id).FirstOrDefault();
-            }//end dbcontext declaration
-        }//end GetProductByIdFromDataStore
-
-
+                return data.Products.Where(s => s.ProductID.Equals(id)).FirstOrDefault();
+            }
+        }
         public OrderViewModel GetOrderInfo(string id)
         {
             OrderViewModel order = new OrderViewModel();
             //Call the method GetSelectedProduct and assign the return value to SelectedProduct property
             order.SelectedProduct = GetSelectedProduct(id);
             return order;
-        }//end OrderViewModel
-
+        }  
         public ProductViewModel GetSelectedProduct(string id)
         {
             if (this.products == null)
@@ -85,7 +74,13 @@ namespace Ch24ShoppingCartMVC.Models {
                 return ConvertToViewModel(GetProductByIdFromDataStore(id));
             else
                 //Get the product from the products where ProductID is matched with id (Using Lambda expression)
-                return this.products.Where(p => p.ProductID == id).FirstOrDefault();
-        }//end GetSelected Product                   
-     }//end class
-}//end namespace
+                return this.products.Where(s => s.ProductID.Equals(id)).FirstOrDefault();
+        }
+              
+        
+        
+        
+        
+        
+    }
+}
